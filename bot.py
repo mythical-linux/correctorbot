@@ -28,17 +28,14 @@ except FileExistsError:
       print('Config folder already exists at ' + config_home_complete + '.')
 else:
       print('Config folder created at ' + config_home_complete + '.')
-
       pathcheck = os.path.exists(config_home_complete + 'config.json')
       if pathcheck:
             with open(config_home_complete + 'config.json') as json_data_file:
                        data = json.load(json_data_file)
       else:
-            print('Uh oh! CorrectorBOT could not start because you\'re missing a config file! Create ' + config_home_complete + 'config.json and fill it with this data:\n{\n   "token\
-": "<bot account\'s token>"\n}')
+            print('Uh oh! CorrectorBOT could not start because you\'re missing a config file! Create ' + config_home_complete + 'config.json and fill it with this data:\n{\n   "token": "<bot account\'s token>"\n}')
                 exit()
-
-                # # # Config part # # #
+# # # Config part # # #
                 
 
 
